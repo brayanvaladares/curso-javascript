@@ -8,8 +8,12 @@
 */
 
 const VerificarParImpar = (x) => {
-  let resto = x % 2;
-  return `${resto <= 0 ? "Par" : "Ímpar"}`;
+  if (typeof x === "number") {
+    let resto = x % 2;
+    return `${resto <= 0 ? "Par" : "Ímpar"}`;
+  } else {
+    return "Dados Inválidos";
+  }
 };
 
 console.log(VerificarParImpar(7)); // "Ímpar"

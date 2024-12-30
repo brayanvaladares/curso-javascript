@@ -7,7 +7,11 @@
 */
 
 const contarCaracteres = (string) => {
-  return `${string.length} caracteres`;
+  if (typeof string === "string") {
+    return `${string.length} caracteres`;
+  } else {
+    return "Dados Inválidos";
+  }
 };
 
 console.log(contarCaracteres("JavaScript"));
